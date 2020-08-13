@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mp0-XM-T2S">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Города-->
+        <scene sceneID="UJK-uT-af6">
+            <objects>
+                <viewController id="gT3-pa-LX2" customClass="CityListViewController" customModule="WeatherTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZnO-m5-nWc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tu3-3h-j6M"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Города" image="line.horizontal.3" catalog="system" id="Shw-xo-YYZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2w8-R4-TNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="168"/>
+        </scene>
+        <!--Карта-->
+        <scene sceneID="1Sn-aP-pBO">
+            <objects>
+                <viewController id="dlp-RH-JqV" customClass="MapViewController" customModule="WeatherTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePT-ag-NUU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ovc-zE-5zv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Карта" image="map" catalog="system" id="aYt-Xk-qFH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2N-Za-qsY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="-480"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cha-B9-xvf">
+            <objects>
+                <tabBarController id="mp0-XM-T2S" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qlB-Yv-zuY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dlp-RH-JqV" kind="relationship" relationship="viewControllers" id="OtU-fV-7PX"/>
+                        <segue destination="gT3-pa-LX2" kind="relationship" relationship="viewControllers" id="NCr-mG-9oe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdd-2d-463" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-425" y="-104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
+        <image name="map" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
